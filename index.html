@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bildebanken – Oversikt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=8" />
+  <script>(function(){try{if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
+</head>
+<body>
+  <!-- Toppbar -->
+  <header class="topbar">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">
+        <img src="Assets/NRKlogo-Core-Gray-950.webp" alt="NRK" />
+      </span>
+      Bildebanken
+    </a>
+    <div class="topbar-spacer"></div>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Bytt mellom lyst og mørkt tema" title="Bytt tema">
+      <span class="theme-ic theme-sun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></span>
+      <span class="theme-ic theme-moon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></span>
+    </button>
+    <div class="topbar-spacer"></div>
+    <span class="user-chip">
+      <span class="avatar">KD</span>
+      Hei, Kaja van Domburg
+    </span>
+  </header>
+
+  <main class="page">
+    <section class="search-hero">
+      <h1>Hva leter du etter?</h1>
+      <div class="search-row">
+        <form class="search-big" onsubmit="return false;">
+          <input type="text" placeholder="Søk i bilder, personer, steder..." aria-label="Søk i bilder" />
+          <button type="submit" class="search-btn">
+            Søk
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </button>
+        </form>
+        <a href="last-opp.html" class="btn btn-upload">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Last opp
+        </a>
+      </div>
+    </section>
+
+    <div class="content-layout variant" id="content-layout">
+      <!-- Filter -->
+      <aside class="filter-sidebar">
+        <div class="filter-header">
+          <h2>Filter</h2>
+          <button class="filter-toggle-btn" id="toggle-filter" type="button" aria-label="Skjul filter" title="Skjul filter">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+        </div>
+
+        <div class="filter-section">
+          <h3>Rettigheter</h3>
+          <div class="segmented" id="rights-toggle">
+            <button type="button" data-rights="alle" class="is-active">Vis alle</button>
+            <button type="button" data-rights="godkjente">Vis kun godkjente</button>
+          </div>
+        </div>
+
+        <div class="filter-section">
+          <h3>Kategorier</h3>
+          <ul class="cat-list">
+            <li>
+              <div class="cat-parent">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                Nyheter og politikk
+              </div>
+            </li>
+            <li>
+              <div class="cat-parent is-open">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                Sport
+              </div>
+              <ul class="cat-sub">
+                <li>VM 2026</li>
+                <li>Vinter</li>
+                <li>Sommer</li>
+                <li>Lagidrett</li>
+                <li>OL / Paralympics</li>
+                <li>Norske utøvere (portretter)</li>
+              </ul>
+            </li>
+            <li>
+              <div class="cat-parent">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                Kultur og underholdning
+              </div>
+            </li>
+            <li>
+              <div class="cat-parent">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                Natur og miljø
+              </div>
+            </li>
+            <li>
+              <div class="cat-parent">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                Samfunn
+              </div>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Innhold -->
+      <section>
+        <button type="button" class="btn btn-secondary show-filter-btn" id="show-filter">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg>
+          Vis filter
+        </button>
+        <div class="legend">
+          <span class="legend-title">Status</span>
+          <span class="legend-item"><span class="dot dot-green"></span> Godkjent for bruk</span>
+          <span class="legend-item"><span class="dot dot-orange"></span> Begrenset bruk</span>
+          <span class="legend-item"><span class="dot dot-red"></span> Ikke klarert</span>
+          <span class="legend-item"><span class="dot dot-blue"></span> Tidsbegrenset</span>
+        </div>
+
+        <div class="toolbar">
+          <div class="tabs" id="source-tabs">
+            <button type="button" class="tab is-active" data-source="nrk">NRK sine bilder</button>
+            <button type="button" class="tab" data-source="ntb">NTB</button>
+            <button type="button" class="tab" data-source="stock">Stock-bilder</button>
+            <button type="button" class="tab" data-source="uploads">Dine opplastinger</button>
+          </div>
+          <div class="sort">
+            <label for="sort-select">Sortér:</label>
+            <select id="sort-select">
+              <option>Nyeste</option>
+              <option>Eldste</option>
+              <option>Mest brukt</option>
+              <option>Tittel (A–Å)</option>
+            </select>
+          </div>
+        </div>
+
+        <p class="source-info" id="source-info" hidden>
+          Her finner du bilder fra Adobe Stock. Du må be om tillatelse til å kjøpe bildet.
+          <a href="index-stock-modal.html">Se modal-variant</a>
+        </p>
+
+        <div class="empty-state" id="empty-state" hidden>
+          <p id="empty-msg">Ingen bilder å vise.</p>
+          <a href="last-opp.html" class="btn btn-primary" id="empty-cta">Last opp bilde</a>
+        </div>
+
+        <div class="grid" id="image-grid">
+          <!-- Kortene fylles inn av app.js -->
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div class="toast" id="toast">
+    <span class="toast-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+    </span>
+    <span id="toast-msg"></span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

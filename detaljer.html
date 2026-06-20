@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bildedetaljer – Bildebanken</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=6" />
+  <script>(function(){try{if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
+</head>
+<body>
+  <!-- Toppbar -->
+  <header class="topbar">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">
+        <img src="Assets/NRKlogo-Core-Gray-950.webp" alt="NRK" />
+      </span>
+      Bildebanken
+    </a>
+    <div class="topbar-spacer"></div>
+    <div class="topbar-actions">
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Bytt mellom lyst og mørkt tema" title="Bytt tema">
+        <span class="theme-ic theme-sun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></span>
+        <span class="theme-ic theme-moon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></span>
+      </button>
+      <a href="last-opp.html" class="btn btn-secondary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        Last opp
+      </a>
+      <span class="user-chip">
+        <span class="avatar">KD</span>
+        Hei, Kaja van Domburg
+      </span>
+    </div>
+  </header>
+
+  <main class="page">
+    <a href="index.html" class="back-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Tilbake til oversikt
+    </a>
+
+    <div class="detail-layout">
+      <!-- Bilde -->
+      <section class="detail-media">
+        <div class="detail-image" id="detail-image">
+          <span class="source-badge" id="detail-source">ADOBE STOCK</span>
+          <img id="detail-photo" src="Assets/K83Y1iTxWpqkzrPEq3XOigUQHZ1o1wRWf2-6cj6-jMvg.jpg" alt="" />
+        </div>
+        <div class="detail-caption">
+          <h1 id="detail-title">Tittel på bilde_foto-fotografnavn_090426</h1>
+          <div class="media-specs">
+            <span>3500x2800px</span>
+            <span>PNG</span>
+            <span>12,5 MB</span>
+          </div>
+          <div class="tags" style="padding: 0;" id="detail-tags">
+            <span class="tag">Sport</span>
+            <span class="tag">Fotball</span>
+            <span class="tag">Landslaget</span>
+            <span class="tag">Nyheter</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Metadata -->
+      <aside class="detail-panel">
+        <div class="meta-section">
+          <h2>Opphavsrett</h2>
+          <div class="meta-row"><span class="label">Fotograf</span><span class="value" id="detail-photographer">Navn Navnesen</span></div>
+          <div class="meta-row"><span class="label">Byrå</span><span class="value" id="detail-agency">Adobe Stock</span></div>
+          <div class="meta-row"><span class="label">Kreditering</span><span class="value" id="detail-credit">Foto: Navn Navnesen / Adobe Stock</span></div>
+          <div class="meta-row" id="detail-price-row" style="display: none;"><span class="label">Pris</span><span class="value" id="detail-price">–</span></div>
+          <div class="meta-row"><span class="label">Lastet opp</span><span class="value">21.03.2026, kl. 23.35</span></div>
+        </div>
+
+        <div class="meta-section">
+          <h2>Restriksjoner</h2>
+          <div class="meta-row">
+            <span class="label">Status</span>
+            <span class="value"><span class="status-pill" id="detail-status"><span class="dot"></span> Godkjent for bruk</span></span>
+          </div>
+          <div class="meta-row" id="detail-approver-row"><span class="label">Godkjent av</span><span class="value">Navn Navnesen</span></div>
+          <p class="meta-note" id="detail-reason" style="display: none;"></p>
+        </div>
+
+        <div class="meta-section">
+          <h2>Innhold og publisering</h2>
+          <div class="meta-block">
+            <span class="label">Bildetekst</span>
+            <p class="meta-text" id="detail-caption">–</p>
+          </div>
+          <div class="meta-row">
+            <span class="label">Avbildede personer</span>
+            <span class="value" id="detail-persons">–</span>
+          </div>
+          <div class="meta-row">
+            <span class="label">Samtykke</span>
+            <span class="value" id="detail-consent">–</span>
+          </div>
+          <div class="meta-row">
+            <span class="label">KI-generert / manipulert</span>
+            <span class="value" id="detail-ai">–</span>
+          </div>
+          <div class="meta-block">
+            <span class="label">Alternativ tekst</span>
+            <p class="meta-text" id="detail-alt">–</p>
+          </div>
+        </div>
+
+        <div class="meta-section" id="detail-history-section">
+          <h2>Brukerhistorikk</h2>
+          <div class="meta-row"><span class="label">Publisert</span><span class="value">15. mars 2026</span></div>
+          <div class="meta-row"><span class="label">Sist brukt</span><span class="value">2. april 2026</span></div>
+          <div class="meta-row"><span class="label">Brukt</span><span class="value">3 ganger · <span class="link-inline" id="see-cases">se saker</span></span></div>
+        </div>
+
+        <div class="form-actions" id="detail-actions">
+          <button type="button" class="btn btn-primary" id="insert-btn">Sett inn</button>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <div class="toast" id="toast">
+    <span class="toast-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+    </span>
+    <span id="toast-msg"></span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
